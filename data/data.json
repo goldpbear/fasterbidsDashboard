@@ -1,6 +1,14 @@
 [
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "Super Doors",
+		"salesperson": "John Smith",
+		"product": "Fiberglass Door",
+		"price": 535.50,
+		"sales": 11
+	},
+	{
+		"region": "Northwest",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -8,7 +16,7 @@
 		"sales": 8
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -16,7 +24,7 @@
 		"sales": 2
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -24,7 +32,7 @@
 		"sales": 22
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -32,7 +40,7 @@
 		"sales": 0
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -40,7 +48,15 @@
 		"sales": 5
 	},
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "Super Doors",
+		"salesperson": "Mary Patterson",
+		"product": "Fiberglass Door",
+		"price": 535.50,
+		"sales": 3
+	},
+	{
+		"region": "Northwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -48,7 +64,7 @@
 		"sales": 10
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -56,7 +72,7 @@
 		"sales": 6
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -64,7 +80,7 @@
 		"sales": 18
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -72,7 +88,7 @@
 		"sales": 2
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -81,33 +97,8 @@
 	},
 
 
-
 	{
-		"region": "northwest",
-		"distributor": "Super Doors",
-		"salesperson": "John Smith",
-		"product": "Wooden Door",
-		"price": 330.00,
-		"sales": 5
-	},
-	{
-		"region": "southwest",
-		"distributor": "Super Doors",
-		"salesperson": "John Smith",
-		"product": "Wooden Door",
-		"price": 330.00,
-		"sales": 8
-	},
-	{
-		"region": "midwest",
-		"distributor": "Super Doors",
-		"salesperson": "John Smith",
-		"product": "Wooden Door",
-		"price": 330.00,
-		"sales": 2
-	},
-	{
-		"region": "northeast",
+		"region": "Canada",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -115,7 +106,39 @@
 		"sales": 11
 	},
 	{
-		"region": "southeast",
+		"region": "Northwest",
+		"distributor": "Super Doors",
+		"salesperson": "John Smith",
+		"product": "Wooden Door",
+		"price": 330.00,
+		"sales": 5
+	},
+	{
+		"region": "Southwest",
+		"distributor": "Super Doors",
+		"salesperson": "John Smith",
+		"product": "Wooden Door",
+		"price": 330.00,
+		"sales": 8
+	},
+	{
+		"region": "Midwest",
+		"distributor": "Super Doors",
+		"salesperson": "John Smith",
+		"product": "Wooden Door",
+		"price": 330.00,
+		"sales": 2
+	},
+	{
+		"region": "Northeast",
+		"distributor": "Super Doors",
+		"salesperson": "John Smith",
+		"product": "Wooden Door",
+		"price": 330.00,
+		"sales": 11
+	},
+	{
+		"region": "Southeast",
 		"distributor": "Super Doors",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -123,7 +146,15 @@
 		"sales": 10
 	},
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "Super Doors",
+		"salesperson": "Mary Patterson",
+		"product": "Wooden Door",
+		"price": 330.00,
+		"sales": 18
+	},
+	{
+		"region": "Northwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -131,7 +162,7 @@
 		"sales": 10
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -139,7 +170,7 @@
 		"sales": 1
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -147,7 +178,7 @@
 		"sales": 0
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -155,7 +186,7 @@
 		"sales": 15
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "Super Doors",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -166,15 +197,7 @@
 
 
 	{
-		"region": "northwest",
-		"distributor": "National Door",
-		"salesperson": "John Smith",
-		"product": "Fiberglass Door",
-		"price": 660.00,
-		"sales": 2
-	},
-	{
-		"region": "southwest",
+		"region": "Canada",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -182,15 +205,7 @@
 		"sales": 12
 	},
 	{
-		"region": "midwest",
-		"distributor": "National Door",
-		"salesperson": "John Smith",
-		"product": "Fiberglass Door",
-		"price": 660.00,
-		"sales": 11
-	},
-	{
-		"region": "northeast",
+		"region": "Northwest",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -198,7 +213,31 @@
 		"sales": 2
 	},
 	{
-		"region": "southeast",
+		"region": "Southwest",
+		"distributor": "National Door",
+		"salesperson": "John Smith",
+		"product": "Fiberglass Door",
+		"price": 660.00,
+		"sales": 12
+	},
+	{
+		"region": "Midwest",
+		"distributor": "National Door",
+		"salesperson": "John Smith",
+		"product": "Fiberglass Door",
+		"price": 660.00,
+		"sales": 11
+	},
+	{
+		"region": "Northeast",
+		"distributor": "National Door",
+		"salesperson": "John Smith",
+		"product": "Fiberglass Door",
+		"price": 660.00,
+		"sales": 2
+	},
+	{
+		"region": "Southeast",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Fiberglass Door",
@@ -206,7 +245,15 @@
 		"sales": 15
 	},
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "National Door",
+		"salesperson": "Mary Patterson",
+		"product": "Fiberglass Door",
+		"price": 660.00,
+		"sales": 16
+	},
+	{
+		"region": "Northwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -214,7 +261,7 @@
 		"sales": 12
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -222,7 +269,7 @@
 		"sales": 2
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -230,7 +277,7 @@
 		"sales": 11
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -238,7 +285,7 @@
 		"sales": 10
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Fiberglass Door",
@@ -249,7 +296,15 @@
 
 
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "National Door",
+		"salesperson": "John Smith",
+		"product": "Wooden Door",
+		"price": 480.00,
+		"sales": 10
+	},
+	{
+		"region": "Northwest",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -257,7 +312,7 @@
 		"sales": 5
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -265,7 +320,7 @@
 		"sales": 1
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -273,7 +328,7 @@
 		"sales": 17
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -281,7 +336,7 @@
 		"sales": 0
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "National Door",
 		"salesperson": "John Smith",
 		"product": "Wooden Door",
@@ -289,7 +344,15 @@
 		"sales": 8
 	},
 	{
-		"region": "northwest",
+		"region": "Canada",
+		"distributor": "National Door",
+		"salesperson": "Mary Patterson",
+		"product": "Wooden Door",
+		"price": 480.00,
+		"sales": 20
+	},
+	{
+		"region": "Northwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -297,7 +360,7 @@
 		"sales": 18
 	},
 	{
-		"region": "southwest",
+		"region": "Southwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -305,7 +368,7 @@
 		"sales": 11
 	},
 	{
-		"region": "midwest",
+		"region": "Midwest",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -313,7 +376,7 @@
 		"sales": 4
 	},
 	{
-		"region": "northeast",
+		"region": "Northeast",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",
@@ -321,7 +384,7 @@
 		"sales": 10
 	},
 	{
-		"region": "southeast",
+		"region": "Southeast",
 		"distributor": "National Door",
 		"salesperson": "Mary Patterson",
 		"product": "Wooden Door",

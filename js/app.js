@@ -54,7 +54,7 @@ FASTERBIDS.directive("pieChart", function() {
 
 		scope.$watch("data", function(data) {
 			//path.data(pie(data)).attr("d", arc);
-			console.log("data updated!");
+			console.log("data updated!", data);
 		}, true);
 
 	};

@@ -2,7 +2,7 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	position: relative;
+	font-family: Helvetica, sans-serif;
 }
 
 #header-bar {
