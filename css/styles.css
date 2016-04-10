@@ -1,0 +1,47 @@
+
+html, body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#header-bar {
+	height: 15%;
+	background-color: cornflowerblue;
+}
+
+#analytics-container {
+	height: 85%;
+}
+
+#analytics-side-panel {
+	background-color: lightpink;
+	height: 100%;
+}
+
+#analytics-dashboard {
+	background-color: lightblue;
+	height: 100%;
+}
+
+pie-chart {
+}
+
+.menu-input {
+	margin-left: 20px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+.menu-input p {
+	margin-bottom: 0;
+	padding-left: 10px;
+	color: #AAAAAA;
+}
+
+select {
+	border: 4pt solid #CCCCCC;
+	width: 85%;
+	height: 50px;
+	
+}

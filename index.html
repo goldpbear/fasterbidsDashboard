@@ -2,24 +2,82 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <title>Fasterbids data dashboard</title>
-  <meta name="description" content="Fasterbids data dashboard">
+	<title>Fasterbids data dashboard</title>
+	<meta name="description" content="Fasterbids data dashboard">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script src="js/app.js"></script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
-<body ng-app="fasterbids">
-	
+<body ng-app="fasterbids" ng-controller="dashboardCtrl">
 
+	<!-- menu bar -->
+	<div id="header-bar" class="nav nav-tabs">
+		<img src="img/logo.png" alt="Fasterbids logo" height="85px" />
+
+	</div>
+
+	<div id="analytics-container" class="container">
+
+		<!-- side panel -->
+		<div id="analytics-side-panel" class="col-md-3">
+
+			<div class="menu-input">
+				<p>Sales region:</p>
+				<select>
+					<option value="northwest">Northwest</option>
+					<option value="southwest">Southwest</option>
+					<option value="midwest">Midwest</option>
+					<option value="northeast">Northeast</option>
+					<option value="southeast">Southeast</option>
+				</select>
+			</div>
+
+			<div class="menu-input">
+				<p>Distributor:</p>
+				<select>
+					<option value="super_doors">Super Doors</option>
+					<option value="national_door">National Door</option>
+				</select>
+			</div>
+
+			<div class="menu-input">
+				<p>Product:</p>
+				<select>
+					<option value="Fiberglass Door">Fiberglass Door</option>
+					<option value="Wooden Door">Wooden Door</option>
+				</select>
+			</div>
+
+			<div class="menu-input">
+				<p>Salesperson:</p>
+				<select>
+					<option value="John Smith">John Smith</option>
+					<option value="Mary Patterson">Mary Patterson</option>
+				</select>
+			</div>
+
+		</div>
+
+		<!-- dashboard view -->
+		<div id="analytics-dashboard" class="col-md-9">
+
+			<pie-chart data="sampleData1"></pie-chart>
+
+		</div>
+
+
+	</div>
 
 
 
 </body>
+
 </html>
