@@ -42,6 +42,7 @@ FASTERBIDS.controller("dashboardCtrl", function($scope) {
 
 	// filter the local json file with user's current selections
 	$scope.updateData = function() {
+		$scope.totalSales = 0;
 		$scope.filteredData = $scope.data;
 		$scope.selectedFilters.forEach(function(filter) {
 			$scope.filteredData = $scope.filteredData.filter(function(item, n) {
@@ -101,10 +102,13 @@ FASTERBIDS.directive("pieChart", function() {
 		    })
 		    .attr("text-anchor", "middle")
 		    .text(function(d) {
-		    	if (d.data.sales > 0) { return d.data.region + ": $" + (d.data.price * d.data.sales) ; }
+		    	if (d.data.sales > 0) { 
+		    		scope.totalSales += (d.data.price * d.data.sales);
+		    		return d.data.region + ": $" + (d.data.price * d.data.sales); 
+		    	}
 		    });
 
-			// convert to degrees
+			// convert from radians to degrees
 			function angle(d) {
 	      var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
 	      return a > 90 ? a - 180 : a;

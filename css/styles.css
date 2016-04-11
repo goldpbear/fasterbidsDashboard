@@ -39,5 +39,15 @@ pie-chart {
 select {
 	border: 4pt solid #CCCCCC;
 	width: 85%;
+	max-width: 250px;
 	height: 50px;
 }
+
+#header-readout {
+	position: absolute;
+	left: 100px;
+	top: 5%;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
