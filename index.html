@@ -21,7 +21,6 @@
 	<!-- header bar -->
 	<div id="header-bar" class="nav nav-tabs">
 		<img src="img/logo.png" alt="Fasterbids logo" />
-
 	</div>
 
 	<div id="analytics-container" class="container">
@@ -33,7 +32,12 @@
 			<div ng-repeat="item in metadata" id="input-container">
 				<div class="menu-input">
 					<p>{{ item.label }}</p>
-					<select  ng-model="metadata" ng-init="metadata = item.items[0]" ng-options="option for option in item.items"></select>
+					<select ng-model="metadata" 
+									ng-options="option for option in item.items"
+									ng-init="metadata = item.items[0]"
+									ng-change="onInputChange(metadata, item.name, $index)" 
+									data-name="{{ item.name }}">
+					</select>
 				</div>
 			</div>
 		</div>
