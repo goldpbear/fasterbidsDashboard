@@ -68,12 +68,13 @@ FASTERBIDS.directive("pieChart", function() {
 			arc = d3.svg.arc()
 					.outerRadius(radius - padding)
 					.innerRadius(0),
-			arcs = svg.selectAll("g.arc");
-			//path = svg.selectAll("path");
+			arcs = svg.selectAll("path");
 
 		// update the pie chart when the data changes
 		scope.$watch("filteredData", function(filteredData) {
 			filteredData = filteredData || [];
+			svg.selectAll("g").remove();
+
 			arcs.data(pie(filteredData))
 				.enter()
 				.append("g")
