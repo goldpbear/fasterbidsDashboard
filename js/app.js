@@ -86,13 +86,17 @@ FASTERBIDS.directive("pieChart", function() {
 			svg.selectAll("g")
 			    .append("text")
 			    .attr("transform", function(d) {
-			    	return "translate(" + arc.centroid(d) + ")";
+			    	return "translate(" + arc.centroid(d) + ") rotate(" + angle(d) + ")";
 			    })
 			    .attr("text-anchor", "middle")
 			    .text(function(d) {
-			    	console.log(d.data.region);
-			    	return d.data.region;
+			    	if (d.data.sales > 0) { return d.data.region + ": $" + (d.data.price * d.data.sales) ; }
 			    });
+
+			function angle(d) {
+		      var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
+		      return a > 90 ? a - 180 : a;
+		    }
 		}, true);
 	};
 
