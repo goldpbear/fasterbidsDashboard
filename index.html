@@ -33,7 +33,7 @@
 			<div ng-repeat="item in metadata" id="input-container">
 				<div class="menu-input">
 					<p>{{ item.label }}</p>
-					<select ng-model="metadata" ng-options="option for option in item.items"></select>
+					<select  ng-model="metadata" ng-init="metadata = item.items[0]" ng-options="option for option in item.items"></select>
 				</div>
 			</div>
 		</div>
