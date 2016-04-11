@@ -10,27 +10,24 @@ html, body {
 	background-color: cornflowerblue;
 }
 
-#analytics-container {
-	height: 85%;
-}
-
-#analytics-side-panel {
-	background-color: lightpink;
-	height: 100%;
-}
-
-#analytics-dashboard {
-	background-color: lightblue;
-	height: 100%;
+#header-bar img {
+	margin-top: 15px;
+	margin-left: 30px;
+	height: 60%;
 }
 
 pie-chart {
+
+}
+
+#input-container:first-of-type {
+	margin-top: 100px;
 }
 
 .menu-input {
 	margin-left: 20px;
-	margin-top: 30px;
 	font-size: 20px;
+	margin-top: 30px;
 }
 
 .menu-input p {
@@ -43,5 +40,4 @@ select {
 	border: 4pt solid #CCCCCC;
 	width: 85%;
 	height: 50px;
-	
 }

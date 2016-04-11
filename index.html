@@ -18,9 +18,9 @@
 
 <body ng-app="fasterbids" ng-controller="dashboardCtrl">
 
-	<!-- menu bar -->
+	<!-- header bar -->
 	<div id="header-bar" class="nav nav-tabs">
-		<img src="img/logo.png" alt="Fasterbids logo" height="85px" />
+		<img src="img/logo.png" alt="Fasterbids logo" />
 
 	</div>
 
@@ -28,42 +28,23 @@
 
 		<!-- side panel -->
 		<div id="analytics-side-panel" class="col-md-3">
-			<div class="menu-input">
-				<p>Distributor:</p>
-				<select>
-					<option value="super_doors">Super Doors</option>
-					<option value="national_door">National Door</option>
-				</select>
-			</div>
 
-			<div class="menu-input">
-				<p>Product:</p>
-				<select>
-					<option value="Fiberglass Door">Fiberglass Door</option>
-					<option value="Wooden Door">Wooden Door</option>
-				</select>
-			</div>
-
-			<div class="menu-input">
-				<p>Salesperson:</p>
-				<select>
-					<option value="John Smith">John Smith</option>
-					<option value="Mary Patterson">Mary Patterson</option>
-				</select>
+			<!-- build dropdown menu filters -->
+			<div ng-repeat="item in metadata" id="input-container">
+				<div class="menu-input">
+					<p>{{ item.label }}</p>
+					<select ng-model="metadata" ng-options="option for option in item.items"></select>
+				</div>
 			</div>
 		</div>
 
 		<!-- dashboard view -->
 		<div id="analytics-dashboard" class="col-md-9">
 
-			<pie-chart data="sampleData1"></pie-chart>
+			<pie-chart></pie-chart>
 
 		</div>
-
-
 	</div>
-
-
 
 </body>
 
