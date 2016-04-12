@@ -55,11 +55,11 @@ FASTERBIDS.controller("dashboardCtrl", function($scope) {
 
 FASTERBIDS.directive("pieChart", function() {
 	function link(scope, el, attr) {
+		el.addClass("chart");
 
 		// set up the svg canvas
-		var width = 500,
-			height = 500,
-			padding = 75,
+		var width = 375,
+			height = 375,
 			radius = Math.min(width, height) / 2,
 			color = d3.scale.category20(),
 			svg = d3.select(el[0])
@@ -73,13 +73,13 @@ FASTERBIDS.directive("pieChart", function() {
 				.value(function(d) { return d.sales }),
 			arcData = pie(data),
 			arc = d3.svg.arc()
-				.outerRadius(radius - padding)
+				.outerRadius(radius)
 				.innerRadius(0),
 			arcs = svg.selectAll("path");
 
 		// update the pie chart when the data changes
 		scope.$watch("filteredData", function(filteredData) {
-			filteredData = filteredData || [];
+			var filteredData = filteredData || [];
 
 			// remove old elements so they don't pile up
 			svg.selectAll("g").remove();
@@ -120,4 +120,67 @@ FASTERBIDS.directive("pieChart", function() {
 		link: link,
 		restrict: "E"
 	}
+});
+
+FASTERBIDS.directive("barChart", function() {
+	function link(scope, el, attr) {
+		el.addClass("chart");
+
+		// set up the svg canvas
+		var width = 400,
+			height = 400,
+			barWidth = 50,
+			barPadding = 5,
+			leftGutter = 75,
+			color = d3.scale.category20(),
+			svg = d3.select(el[0])
+				.append('svg')
+				.attr('width', width)
+				.attr('height', height),
+			yScale = d3.scale.linear()
+				// arbitrary domain
+				.domain([0, 25000])
+				.range([height, 0]),
+			yAxis = d3.svg.axis()
+				.scale(yScale)
+				.orient("left")
+				.ticks(10)
+				.tickFormat(function(d) { return "$" + format(d); }),
+			format = d3.format(",");
+
+		scope.$watch("filteredData", function(filteredData) {
+			var filteredData = filteredData || [];
+			svg.selectAll("g").remove();
+
+			svg.selectAll("rect")
+				.data(filteredData)
+				.enter()
+				.append("g")
+				.append("rect")
+				.attr("width", barWidth)
+				.attr("height", function(d) { return (d.sales * d.price); })
+				.style("fill", function(d, i) { return color(i); })
+				.attr("x", function(d, i) { return (i * barWidth) + (i * barPadding) + leftGutter; })
+				.attr("y", function(d) { return yScale(d.sales * d.price); });
+
+			svg.selectAll("g")
+				.append("text")
+				.attr("transform", function(d, i) {
+		    	return "translate(" + ((i * barWidth + 30) + (i * barPadding) + leftGutter) + "," + (yScale(d.sales * d.price) - 10) + ") rotate(270)";
+		    })
+				.text(function(d) { return d.region });
+
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + (leftGutter - barPadding) + ",0)")
+				.call(yAxis);
+
+		}, true);
+	};
+
+	return {
+		link: link,
+		restrict: "E"
+	}
+
 });

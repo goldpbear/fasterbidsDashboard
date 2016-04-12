@@ -16,8 +16,20 @@ html, body {
 	height: 60%;
 }
 
-pie-chart {
+.chart {
+	margin-right: 60px;
+}
 
+pie-chart {
+	display: inline;
+}
+
+pie-chart svg {
+	margin-top: 75px;
+}
+
+bar-chart {
+	display: inline;
 }
 
 #input-container:first-of-type {
@@ -26,7 +38,7 @@ pie-chart {
 
 .menu-input {
 	margin-left: 20px;
-	font-size: 20px;
+	font-size: 1.4em;
 	margin-top: 30px;
 }
 
@@ -43,11 +55,21 @@ select {
 	height: 50px;
 }
 
-#header-readout {
+.header-readout {
 	position: absolute;
-	left: 100px;
+	left: 50px;
 	top: 5%;
-	font-size: 1.7em;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-size: 0.8em;
+}
