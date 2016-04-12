@@ -70,7 +70,8 @@ FASTERBIDS.directive("pieChart", function() {
 				.attr('transform', 'translate(' + (width / 2) +  ',' + (height / 2) + ')'),
 			data = [],
 			pie = d3.layout.pie()
-				.value(function(d) { return d.sales }),
+				.value(function(d) { return d.sales })
+				.sort(null),
 			arcData = pie(data),
 			arc = d3.svg.arc()
 				.outerRadius(radius)
@@ -82,25 +83,37 @@ FASTERBIDS.directive("pieChart", function() {
 			var filteredData = filteredData || [];
 
 			// remove old elements so they don't pile up
-			svg.selectAll("g").remove();
+			//svg.selectAll("g").remove();
 
 			// calculate new arc segments
-			arcs.data(pie(filteredData))
+			svg.selectAll("g.pie-piece")
+				.data(pie(filteredData))
 				.enter()
 				.append("g")
+				.attr("class", "pie-piece")
 				.append("path")
 		    .attr("fill", function(d, i) {
 		    	return color(i);
-		    })
+		    });
+
+		  svg.selectAll("g").select("path")
+		  	.transition()
+		  	.duration(500)
 		    .attr("d", arc);
 
 			// add labels
-			svg.selectAll("g")
-		    .append("text")
+			if (svg.selectAll("g.pie-piece").select("text").empty()) {
+				svg.selectAll("g.pie-piece")
+			    .append("text")
+			    .attr("text-anchor", "middle");
+			}
+
+			svg.selectAll("g.pie-piece").select("text")
+				.transition()
+				.duration(500)
 		    .attr("transform", function(d) {
 		    	return "translate(" + arc.centroid(d) + ") rotate(" + angle(d) + ")";
 		    })
-		    .attr("text-anchor", "middle")
 		    .text(function(d) {
 		    	if (d.data.sales > 0) { 
 		    		scope.totalSales += (d.data.price * d.data.sales);
@@ -176,7 +189,6 @@ FASTERBIDS.directive("barChart", function() {
 
 			// only create text nodes on the first draw of the chart
 			if (svg.selectAll("g.bar").select("text").empty()) {
-				console.log("creating text nodes");
 				svg.selectAll("g.bar")
 					.append("text")
 					.text(function(d) { return d.region });
