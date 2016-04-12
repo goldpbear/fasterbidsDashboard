@@ -168,9 +168,13 @@ FASTERBIDS.directive("barChart", function() {
 				.attr("x", function(d, i) { return (i * barWidth) + (i * barPadding) + leftGutter; })
 				.attr("y", function(d) { return yScale(d.sales * d.price); });
 
-			svg.selectAll("g.bar")
-				.append("text")
-				.text(function(d) { return d.region });
+			// only create text nodes on the first draw of the chart
+			if (d3.selectAll("g.bar").select("text").empty()) {
+				console.log("creating text nodes");
+				svg.selectAll("g.bar")
+					.append("text")
+					.text(function(d) { return d.region });
+			}
 
 			svg.selectAll("g.bar").select("text")
 				.transition()
