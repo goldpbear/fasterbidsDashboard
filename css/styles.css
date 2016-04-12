@@ -18,18 +18,11 @@ html, body {
 
 .chart {
 	margin-right: 60px;
-}
-
-pie-chart {
 	display: inline;
 }
 
-pie-chart svg {
-	margin-top: 75px;
-}
-
-bar-chart {
-	display: inline;
+.chart svg {
+	margin-top: 65px;
 }
 
 #input-container:first-of-type {
