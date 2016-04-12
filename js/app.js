@@ -169,7 +169,7 @@ FASTERBIDS.directive("barChart", function() {
 				.attr("y", function(d) { return yScale(d.sales * d.price); });
 
 			// only create text nodes on the first draw of the chart
-			if (d3.selectAll("g.bar").select("text").empty()) {
+			if (svg.selectAll("g.bar").select("text").empty()) {
 				console.log("creating text nodes");
 				svg.selectAll("g.bar")
 					.append("text")
