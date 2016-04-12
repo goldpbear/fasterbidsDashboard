@@ -148,6 +148,12 @@ FASTERBIDS.directive("barChart", function() {
 				.tickFormat(function(d) { return "$" + format(d); }),
 			format = d3.format(",");
 
+			// draw y axis
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + (leftGutter - barPadding) + ",0)")
+				.call(yAxis);
+
 		scope.$watch("filteredData", function(filteredData) {
 			var filteredData = filteredData || [];
 			//svg.selectAll("g.bar").remove();
@@ -182,12 +188,6 @@ FASTERBIDS.directive("barChart", function() {
 				.attr("transform", function(d, i) {
 		    	return "translate(" + ((i * barWidth + 30) + (i * barPadding) + leftGutter) + "," + (yScale(d.sales * d.price) - 10) + ") rotate(270)";
 		    })
-		    
-			svg.append("g")
-				.attr("class", "axis")
-				.attr("transform", "translate(" + (leftGutter - barPadding) + ",0)")
-				.call(yAxis);
-
 		}, true);
 	};
 
