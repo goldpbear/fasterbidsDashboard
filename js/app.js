@@ -150,26 +150,35 @@ FASTERBIDS.directive("barChart", function() {
 
 		scope.$watch("filteredData", function(filteredData) {
 			var filteredData = filteredData || [];
-			svg.selectAll("g").remove();
+			//svg.selectAll("g.bar").remove();
 
-			svg.selectAll("rect")
+			svg.selectAll("g.bar")
 				.data(filteredData)
 				.enter()
 				.append("g")
-				.append("rect")
+				.attr("class", "bar")
+				.append("rect");
+
+			svg.selectAll("g.bar").select("rect")
 				.attr("width", barWidth)
 				.attr("height", function(d) { return (d.sales * d.price); })
+				.transition()
+				.duration(500)
 				.style("fill", function(d, i) { return color(i); })
 				.attr("x", function(d, i) { return (i * barWidth) + (i * barPadding) + leftGutter; })
 				.attr("y", function(d) { return yScale(d.sales * d.price); });
 
-			svg.selectAll("g")
+			svg.selectAll("g.bar")
 				.append("text")
+				.text(function(d) { return d.region });
+
+			svg.selectAll("g.bar").select("text")
+				.transition()
+				.duration(500)
 				.attr("transform", function(d, i) {
 		    	return "translate(" + ((i * barWidth + 30) + (i * barPadding) + leftGutter) + "," + (yScale(d.sales * d.price) - 10) + ") rotate(270)";
 		    })
-				.text(function(d) { return d.region });
-
+		    
 			svg.append("g")
 				.attr("class", "axis")
 				.attr("transform", "translate(" + (leftGutter - barPadding) + ",0)")
